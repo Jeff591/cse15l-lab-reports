@@ -15,4 +15,9 @@ This lab report will detail how to log into a course-specific account on ieng6.
 ## Part 3: Remotely Connecting and Git
 1. If you do not have git already installed click the following [link](https://gitforwindows.org/) to be taken to the following page. Hit download and follow the instructions.![image](https://user-images.githubusercontent.com/67081225/212382005-fad827ca-0f77-4e49-98c4-8a6a9ed7dd52.png)
 2. Open up VS Code and create a terminal to run `ssh cs15lwi23xx@ieng6.ucsd.edu` but replace the part infront of @ieng6 with correct account name you found in part 1. 
-3. 
+3. After running the commad, you may get a screen which asks `Are you sure you want to continue connecting (yes/no/[fingerprint])?`. Type in yes if you are logging in for the first time. 
+4. Enter your password that you set up in part 1 and you should then be on a similar screen to this. ![image](https://user-images.githubusercontent.com/67081225/212386482-ff232cb8-3242-43df-a7e2-bbc5c8c860e4.png)
+
+## Part 4: Try Running Some Commands
+
+
