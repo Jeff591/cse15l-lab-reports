@@ -9,8 +9,8 @@ This lab report will detail how to log into a course-specific account on ieng6.
 
 ## Part 2: Installing Visual Studio Code
 1. If you do not already have Visual Studio Code installed on your computer, go to https://code.visualstudio.com/ to get the instructions on how to install.
-2. Once at the site, choose the stable build for the operating system your device is using by clicking on the drop down button.![image](https://user-images.githubusercontent.com/67081225/212381197-6c6dbd81-a5da-4f77-88a7-e98cb0b5282f.png)
-3. Once you get the installer, follow the instructions prompted and choose all the default settings. After installation process, open up VS Code and you will get a window like this. ![image](https://user-images.githubusercontent.com/67081225/212381592-6d78b56f-bcc9-4e22-81bd-1eab42b5ea3b.png)
+2. Once at the site, choose the stable build for the operating system your device is using by clicking on the drop down button. ![image](https://user-images.githubusercontent.com/67081225/212381197-6c6dbd81-a5da-4f77-88a7-e98cb0b5282f.png)
+3. Once you get the installer, follow the instructions prompted and choose all the default settings. After installation process, open up VS Code and you will get a window like this.                                                               ![image](https://user-images.githubusercontent.com/67081225/212381592-6d78b56f-bcc9-4e22-81bd-1eab42b5ea3b.png)
 
 ## Part 3: Remotely Connecting and Git
 1. If you do not have git already installed click the following [link](https://gitforwindows.org/) to be taken to the following page. Hit download and follow the instructions.![image](https://user-images.githubusercontent.com/67081225/212382005-fad827ca-0f77-4e49-98c4-8a6a9ed7dd52.png)
