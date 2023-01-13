@@ -19,5 +19,14 @@ This lab report will detail how to log into a course-specific account on ieng6.
 4. Enter your password that you set up in part 1 and you should then be on a similar screen to this. ![image](https://user-images.githubusercontent.com/67081225/212386482-ff232cb8-3242-43df-a7e2-bbc5c8c860e4.png)
 
 ## Part 4: Try Running Some Commands
+1. From here, you will be able to run commands like the following:
+* `cd ~` Go back to the home directory
+* `cd <directory-name>` Go to the specified directory
+* `ls <directory-name>` Shows the contents of the specified directory
+* `cp <path> <directory>` Copys the file or directory from the given path to the specified directory
+* `cat <path>` Prints out whatever is in the file determined by the path
 
+2. Here is an example of running some of the commands: ![image](https://user-images.githubusercontent.com/67081225/212390979-4cbf9261-84d7-4d73-a408-67d0aafe601c.png)  
+
+* In this example, I ran the `ls` command to show the contents of the current home directory. Then I ran the `cat hello.txt` command to print out the contents of hello.txt to the terminal. We could also get the same reuslt by doing `cat /home/linux/ieng6/cs15lwi23/public/hello.txt` which is where I originally copied the hello.txt from.
 
