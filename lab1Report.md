@@ -17,7 +17,8 @@ This lab report will detail how to log into a course-specific account on ieng6.
 2. Open up VS Code and create a terminal by either going to the top of the window and hitting "New Terminal" under the Terminal tab or hit Ctrl+Shift+`.![image](https://user-images.githubusercontent.com/67081225/212393373-b9af5223-cc9c-4064-a4e7-6ae8907c288d.png)
 3. Run `ssh cs15lwi23xx@ieng6.ucsd.edu` but replace the part infront of @ieng6 with correct account name you found in part 1. 
 4. After running the commad, you may get a screen which asks `Are you sure you want to continue connecting (yes/no/[fingerprint])?`. Type in yes if you are logging in for the first time. 
-5. Enter your password that you set up in part 1 and you should then be on a similar screen to this. ![image](https://user-images.githubusercontent.com/67081225/212392663-16832bc4-9f7c-4784-ab6a-18f37b028959.png)
+5. Enter your password that you set up in part 1 and you should then be on a similar screen to this. 
+![image](https://user-images.githubusercontent.com/67081225/212392663-16832bc4-9f7c-4784-ab6a-18f37b028959.png)
 
 
 ## Part 4: Try Running Some Commands
