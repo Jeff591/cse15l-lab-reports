@@ -69,7 +69,7 @@ When we run JUnit with our test, we expect that the filter method will take out 
   - ![image](https://user-images.githubusercontent.com/67081225/215291119-6f08ed45-91ae-4d06-a59a-70fd27f844ee.png)
   - As we can see, the testFilter() test returned {"pineapple", "apple"} instead which is not the correct ordering. But testFilter2() seems to have run fine.
 
-For a list of strings that only has only has one valid string like in testFilter2(), no problem arises from ordering as there only one way to order the resulting list. However when we have multiple valid strings like in testFilter(), we run into the ordering problems. So we should look at the static List<String> filter(List<String> list, StringChecker sc)` method inside ListExamples.java.
+For a list of strings that only has only has one valid string like in testFilter2(), no problem arises from ordering as there only one way to order the resulting list. However when we have multiple valid strings like in testFilter(), we run into the ordering problems. So we should look at the `static List<String> filter(List<String> list, StringChecker sc)` method inside ListExamples.java.
 - Here is a screenshot of the bugged code:
   - ```
     static List<String> filter(List<String> list, StringChecker sc) {
