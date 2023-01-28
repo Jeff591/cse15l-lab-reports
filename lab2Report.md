@@ -4,7 +4,6 @@ For this part of the lab, we are tasked with creating a web server that holds a 
 
 Here is the code I wrote for the StringServer and StringHandler classes:
 - ![StringServerCode](https://user-images.githubusercontent.com/67081225/215285308-f665c7f5-f933-47f2-9efe-037a29e7cc17.PNG)
-  - 
 
 Here are two example screenshots of using the `/add-message?s=<string>` request:
 - ![StringServerPage](https://user-images.githubusercontent.com/67081225/215285375-ae5c21f2-86b9-4d6c-9e0e-a62810054eea.PNG)
