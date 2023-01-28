@@ -101,7 +101,10 @@ For a list of strings that only has only has one valid string like in testFilter
 - Then if we run the JUnit tests again we get:
   - ![image](https://user-images.githubusercontent.com/67081225/215291490-d2d57e6f-ad57-4eb4-b9b0-24b5d6bb57e8.png)
   
-
+## Part 3: What we learned
+Personally, I have worked with testing tools like googletest for C++ in the past so JUnit and unit testing was somewhat familiar to me. However I have never had the opprotunity to learn about and set up my own webservers through my local machine. It was interesting to learn how web servers have to take in both the localhost (or computer the server runs on) and an associated port number. It was also interesting creating different URLHandlers that could have different functionality depending on the implementation and what parts of the URL the code is looking for. All this information helps break down and clarify how web servers are run and how URLs are organized to function with the server.
+  
+Apart from the main topics of the lab, I also learned that you can use Github Desktop to work with repositories without having to deal with a linux command prompt, which made commits and pushes to Github much more convinient. For most of my time with Git and Github, I had to manually type `git add <file-name>`, `git commit`, and `git push` to get my changes on Github, but Github Desktop does all of these commands for all files with a few clicks. I will have to consider using Github Desktop from now on when working in my own repositories.
 
 
 
