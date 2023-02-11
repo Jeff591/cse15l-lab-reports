@@ -47,6 +47,30 @@ By doing some research and looking on the following websites: (https://www.howto
      15 Prithvi Narayan Shah captured Kathmandu and Patan in 1768 and Bhaktapur a year later. Before his death in 1775 he had brought under one rule all the territory from the Mahakali     15  River in the west to Sikkim and Darjeeling in the east. During the reign of his son, under a regent, the borders were pushed further north and west, provoking reactions from t     15 he Tibetans and Chinese as well as the British East India Company, the power to the south.
     ```
   - This command numbers each line of the file on the side when viewing the file. A line is determined by the seperation of a new line character so it is possible that one paragraph could be on one line number which is why you may see multiple of the same number on the side. The use of this command could be when wanting to refer to specific line numbers when working with others to communicate which parts of the file you are talking about.
-- `less -p<search-term> <file-name>`
+- `less -p "search-term" <file-name>`
+  - ```
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:266$ less -p "excluding wine" written_2/travel_guides/berlitz1/HandRIbiza.txt
+        expect to pay for a three-course meal for two, excluding wine, tax and
+        tip. Drinks will add considerably to the final bill.
+        <E2><9C><AA>less than 5,000 ptas.
+        <E2><9C><AA><E2><9C><AA>5,000<E2><80><93>8,000 ptas.
+        <E2><9C><AA><E2><9C><AA><E2><9C><AA>more than 8,000 ptas.
+
+
+
+    ``` 
+  - ```
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:268$ less -p "breakfast" written_2/travel_guides/berlitz1/HandRIstanbul.txt
+        prices for a double room with bath, including breakfast:
+        <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81>over <C2><A3>130 ($200)
+        <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>80<E2><80><93>130 ($120-200)
+        <E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>50<E2><80><93>80 ($75-120)
+        <E2><9D><81><E2><9D><81><C2><A3>30<E2><80><93>50 ($45-75)
+        <E2><9D><81>below <C2><A3>30 ($45
+
+
+
+    ```
+  - This command allows us to search a file for the given string and open up the file on the line that string is on. It will put you on the first instance of that string but will highlight all instances of the string within the file upon opening. This command can be useful in bookmarking where you left off in reading a file if you remeber a specific phrase or piece of text. It could also be useful in seeing where all the instances of a string could be in a file if you misspelled a word in the file and had to go search for all the misspellings.
 - `less -s <file-name>`
 - `less -X <file-name>`
