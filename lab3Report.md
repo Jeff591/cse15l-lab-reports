@@ -72,5 +72,101 @@ By doing some research and looking on the following websites: (https://www.howto
 
     ```
   - This command allows us to search a file for the given string and open up the file on the line that string is on. It will put you on the first instance of that string but will highlight all instances of the string within the file upon opening. This command can be useful in bookmarking where you left off in reading a file if you remeber a specific phrase or piece of text. It could also be useful in seeing where all the instances of a string could be in a file if you misspelled a word in the file and had to go search for all the misspellings.
-- `less -s <file-name>`
+- `less <file-name1> <file-name2>`
+  - ```
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:297$ less written_2/travel_guides/berlitz1/HandRIbiza.txt written_2/travel_guides/berlitz1/HandRIstanbul.txt
+        Recommended Hotels
+        The establishments listed below offer a cross-section of
+        local restaurants, and should convince you that not everything on the
+        island comes with chips (french fries).
+        The star rating in brackets after each entry refers to the
+        offfical government rating system.
+        As a basic guide, the symbols we use indicate what you can
+        expect to pay for a three-course meal for two, excluding wine, tax and
+        tip. Drinks will add considerably to the final bill.
+        <E2><9C><AA>less than 5,000 ptas.
+        <E2><9C><AA><E2><9C><AA>5,000<E2><80><93>8,000 ptas.
+        <E2><9C><AA><E2><9C><AA><E2><9C><AA>more than 8,000 ptas.
+
+
+
+    written_2/travel_guides/berlitz1/HandRIbiza.txt (file 1 of 2) (END) - Next: written_2/travel_guides/berlitz1/HandRIstanbul.txt
+    ```
+  - Hitting `:n` on the previous example before
+    ```
+        Recommended Hotels
+        Finding accommodation in Istanbul is rarely a problem, as
+        the city has recently seen a boom in the hotel business. However, if        
+        you want a room in a particular hotel, it is best to book, especially       
+        during July and August. The main hotel areas are Laleli, Aksaray, and       
+        Sultanahmet in the Old City, and around Taksim Square in Beyo<E2><80><98>lu.
+        Intense competition among the middle-range hotels means that you can        
+        often bargain for a lower rate, especially if you plan to stay for more     
+        than two nights.
+        As a basic guide we have used the symbols below to indicate
+        prices for a double room with bath, including breakfast:
+        <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81>over <C2><A3>130 ($200)
+        <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>80<E2><80><93>130 ($120-200)
+        <E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>50<E2><80><93>80 ($75-120)
+        <E2><9D><81><E2><9D><81><C2><A3>30<E2><80><93>50 ($45-75)
+        <E2><9D><81>below <C2><A3>30 ($45
+
+
+
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    ~
+    written_2/travel_guides/berlitz1/HandRIstanbul.txt (file 2 of 2) (END)
+    ```
+  - You can open up multiple files with less using the above command. To go to the next file from the first use `:n` and to go back to the first file use `:p`. This can be useful when you want to quickly cross reference two files. Let's say you are writting a paper in one file and referring to facts in another file. By using less on both files you can quickly switch between them without having to exit and re-run less on the other file.
 - `less -X <file-name>`
+  - ```
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:304$ less -X  written_2/travel_guides/berlitz2/PuertoRico-History.txt
+    A Brief history
+    The First Puerto Ricans
+    The island<E2><80><99>s earliest known inhabitants, Indians now called Arca<C3><AD>cos (<E2><80><9C>the ancients<E2><80><9D>), were primitive fishermen. More than 2,000 years ago they were conquered by another tribe called the Igneri who had mastered farming and potterymaking. The final stage of Indian advancement began while Europe was in the Middle Ages: the Ta<C3><AD>no Indians, a peaceful people native to Venezuela, traveled up through the chain of the Lesser Antilles and settled the island they called Borinqu<C3><A9>n. They lived in thatched houses, hunted and farmed, and worked ceramics and textiles with great skill. Several of their ceremonial <E2><80><9C>ball courts,<E2><80><9D> which were used for certain social or religious gatherings, have been discovered throughout Puerto Rico. The Ta<C3><AD>nos feared an evil spirit, Jurac<C3><A1>n, who was responsible for violent storms and gave his name to the tropical hurricanes of the West Indies. They also feared an earthly evil: the Carib Indians, who periodically raided their land for loot and captives. The Ta<C3><AD>nos<E2><80><99> fears were well founded. The word <E2><80><9C>cannibal<E2><80><9D> derives from Carib, a reminder of the way these marauders disposed of some prisoners.
+    The Arrival of the Europeans
+    On 19 November 1493, Columbus was lucky enough to be met by the kindly Ta<C3><AD>nos (in fact, the name Ta<C3><AD>no meant <E2><80><9C>friend<E2><80><9D> and was used by the Indians to enable the Europeans to distinguish between them and the not-so-friendly Caribs). The Ta<C3><AD>nos were the ones who introduced the Spanish to tobacco, corn on the cob, and that archetypal Caribbean mode of relaxation, the hammock.
+    Columbus christened the island San Juan Bautista (honoring St. John the Baptist). It was the first colonist, Juan Ponce de Le<C3><B3>n, who, admiring a bay on the north coast, declared it Puerto Rico (<E2><80><9C>rich port<E2><80><9D>). Sixteenth-century mapmakers back in Spain mistakenly confused the names, so that in the end the port became San Juan and the whole island was called a <E2><80><9C>rich port<E2><80><9D>; once on the maps, the names stuck.
+    A less innocent error was an American attempt to erase four centuries of Spanish history. After the conquest of 1898 the first US military governor ordered that the name be spelled Porto Rico. This semi-Italian corruption didn<E2><80><99>t last long. Today some nationalists still yearn for good old Borinqu<C3><A9>n, a name you<E2><80><99>ll see on many restaurants and bars.
+    Ponce de Le<C3><B3>n had received permission to found a Spanish colony on the island in 1508. For reasons of security, he settled a few miles inland from what is now San Juan. The site was swampy and mosquito-ridden, and, after a number of outbreaks of disease, his fellow colonists abandoned him and moved to the future capital city. They immediately began work on the formidable fortifications for which the city is still famous. Ponce de Le<C3><B3>n also suffered another setback. He became involved in a power struggle with Columbus<E2><80><99>s son, Diego, who through his father<E2><80><99>s will had claims on the island. The small colony could not cope with the egos of two such powerful men. The Spanish crown solved the tense standoff by entrusting Ponce de Le<C3><B3>n with another voyage of exploration. His search resulted in the discovery of Florida. While on a second expedition to colonize Florida, in 1521, Ponce de Le<C3><B3>n was critically wounded during an attack by Indians; the explorer hoped to return Puerto Rico but lost his fight for life on the way back, in Havana, Cuba.
+    Ponce de Le<C3><B3>n<E2><80><99>s successors imagined that the island was one big gold mine and set the Indians to work mining and panning. They were wrong, however: the gold soon ran out. The Spaniards then looked to agriculture to turn a profit and began growing sugar cane, which had been introduced to the Caribbean on Columbus<E2><80><99>s second journey. As the number of Ta<C3><AD>no and Carib laborers declined, due to disease and suicide, plantation owners eventually began importing slaves from West Africa.
+    Puerto Rico quickly developed into a major port and trading post<C2><A0><E2><80><94><C2><A0>it was one of the last major ports Spanish galleons stopped in before sailing back to the motherland. San Juan also became the center for the Catholic Church<E2><80><99>s evangelization of the New World; numerous churches, convents, and monasteries were established throughout the island to aid in this effort.
+    A Beleaguered Island
+    To the pirates and privateers who sailed the Caribbean in the early 16th century, the fortress of El Morro at San Juan represented the might, and the wealth, of the Spanish Crown. Lured by the promise of treasure galleons and stores of ammunition, some pirates worked independently; others, however, were employed by the various European crowns, particularly the British, to help carry on their power struggles in the colonial world. Puerto Rico suffered from constant attacks. The most poignant, though not typical, case involved raids against the coastal hamlet of San Germ<C3><A1>n. Two French pirate ships first ravaged the village in 1528. It happened again in 1538 and three times in the following five years. After every attack the settlers put out the fires, buried the dead, and rebuilt San Germ<C3><A1>n. In 1554, after the sixth sacking, the settlers decided to move inland to the town<E2><80><99>s present hilltop location. With remarkable persistence the pirates 
+
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:305$
+    ```
+  - ```
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:310$ less -X  written_2/travel_guides/berlitz2/Cuba-History.txt
+    A Brief History
+    When Christopher Columbus disembarked on eastern Cuba on 27 October 1492, he quickly penned a note exclaiming that the land was <E2><80><9C>the most lovely that eyes have ever seen.<E2><80><9D> Indian tribes including the Siboney from Central and South America had lived on the island since at least 1000 b.c.
+    In 1511 Diego de Vel<C3><A1>zquez sailed from neighboring Hispaniola with some 300 conquistadores (conquerors). Baracoa became the first of seven settlements across Cuba. Vel<C3><A1>zquez and his followers enslaved the native peoples and in the process exposed them to European diseases. Whole villages committed suicide, and by the mid-1500s the Indian population had declined from over 100,000 to 3,000.
+    Piracy and Trade
+    Until the end of the 16th century, Cuba remained a fairly insignificant Spanish colony. The port cities Havana and Santiago de Cuba were heavily fortified to defend against French and English pirate raids. Considerable contraband trade originated from bases around the island.
+    In 1762 British forces captured Havana. They held it for only a year before returning it to Spain in exchange for Florida, but during this period trade was opened up to additional markets, notably the North American colonies. A lucrative tobacco industry had taken hold in Cuba, and after 1763 the sugar-cane business skyrocketed. Though settlers brought the first African slaves to Cuba in the early 1500s, hundreds of thousands of African laborers were imported in the late 18th century to meet the demands of the sugar industry.
+    By the middle of the 19th century, Cuba produced a third of the world<E2><80><99>s sugar and was considered one of the most valuable colonies in the world. Half a million slaves<C2><A0><E2><80><94><C2><A0>nearly half the population<C2><A0><E2> 
+    <80><94><C2><A0>worked the plantations, and at least 3,500 trading ships visited Cuba annually.
+    The Road to Independence
+    Spaniards born and raised in Cuba, known as criollos (creoles), managed the sugar-cane plantations but were not involved in the running of the country. During the 19th century some criollos (particularly in Oriente, the island<E2><80><99>s poorer, eastern region) became increasingly disenchanted and desired greater autonomy.
+    On 10 October 1868 Carlos Manuel de C<C3><A9>spedes, a criollo plantation owner who had already had a brief role in uprisings in Spain, issued a call for independence and liberated slaves from his estate, La Demajagua. During the subsequent Ten Years<E2><80><99> War (1868<E2><80><93>78) 50,000 Cubans<C2><A0><E2><80><94><C2><A0>including C<C3><A9>spedes<C2><A0><E2><80><94><C2><A0>and more than 200,000 Spanish lost their lives. Cuba remained a colony of Spain, but the war contributed to the abolition of slavery on the island in 1886 and planted the seeds of a national consciousness.
+    In 1895 Jos<C3><A9> Mart<C3><AD>, Cuba<E2><80><99>s most venerated patriot (who now has a street, square, or building named after him in every town), led the next and most important uprising against Spain. Born in 1853 and exiled at 18 for his 
+    political views, Mart<C3><AD> became a journalist and poet. From exile in the United States he argued for Cuban independence. Mart<C3><AD> was killed in an ambush during the War of Independence, which began in 1895 and in which some 300,000 Cubans died.
+    Throughout the 19th century, the United States, keenly interested in the island<E2><80><99>s strategic significance and its sugar market, had become increasingly involved in Cuban affairs. A US purchase of the island from Spain had long been on the agenda, even though Mart<C3><AD> had warned of becoming a satellite of the United States (<E2><80><9C>I know the Monster, because I have lived in its lair,<E2><80><9D> he wrote).
+    In February 1898 the U.S.S. Maine was sunk in Havana<E2><80><99>s harbor, killing all 260 crew members. Although Spanish responsibility was never incontrovertibly established, the United States used the sinking as a pretext to declare war. US victory came swiftly, with Spain surrendering claim to the island by the end of the same year. A provisional military government lasted to 1902, when Cuba became an independent republic.
+    False Independence
+    For the next five decades the United States, the largest importer of Cuban sugar, dominated the island<E2><80><99>s economy and largely controlled its political processes. The period was rife with political corruption, violence, and terrorism. 
+    After 1933 Fulgencio Batista, though only a sergeant, orchestrated the strings of power through a series of puppet presidents before winning the presidency outright in 1940. He retired in 1944 but returned by staging a military coup in 1952. His venal dictatorship made it possible for him to invest some $300 million abroad by 1959.
+
+    [cs15lwi23atn@ieng6-202]:skill-demo1-data:311$
+    ``` 
+  - This command keeps leaves the last page displayed from the file on the screen after exiting `less`. This can be useful if you have certain terms or commands in the file you were looking at that you would then want to run in the command line. This helps if you forgot what file you were looking at or what the contents of the file were and need a specific reference right away. 
