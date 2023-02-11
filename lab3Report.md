@@ -2,7 +2,7 @@
 ## Researching the less command
 To recap on what the `less` command allows us to do, it allows us to view the contents of a file by displaying a porition of the file on scrren and giving us the option to scroll using the up or down arrow keys. If we want to leave the view, we just hit q.
 
-By doing some research and looking on the following websites: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/) and [https://linuxize.com/post/less-command-in-linux/](https://linuxize.com/post/less-command-in-linux/), we will talk about some of the `less` commands and use them on the `./written_2` directory from the skill demos:
+By doing some research and looking on the following websites: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/), [https://www.tutorialspoint.com/unix_commands/less.htm](https://www.tutorialspoint.com/unix_commands/less.htm) and [https://linuxize.com/post/less-command-in-linux/](https://linuxize.com/post/less-command-in-linux/), we will talk about some of the `less` commands and use them on the `./written_2` directory from the skill demos:
 - `less -N <file-name>` source: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/)
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:254$ less -N written_2/travel_guides/berlitz2/Bahamas-History.txt
@@ -72,9 +72,26 @@ By doing some research and looking on the following websites: [https://www.howto
 
     ```
   - This command allows us to search a file for the given string and open up the file on the line that string is on. It will put you on the first instance of that string but will highlight all instances of the string within the file upon opening. This command can be useful in bookmarking where you left off in reading a file if you remeber a specific phrase or piece of text. It could also be useful in seeing where all the instances of a string could be in a file if you misspelled a word in the file and had to go search for all the misspellings.
-- `less <file-name1> <file-name2>` source: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/)
-  - ```
-    [cs15lwi23atn@ieng6-202]:skill-demo1-data:297$ less written_2/travel_guides/berlitz1/HandRIbiza.txt written_2/travel_guides/berlitz1/HandRIstanbul.txt
+- `less -m <file-name>`[https://www.tutorialspoint.com/unix_commands/less.htm](https://www.tutorialspoint.com/unix_commands/less.htm)
+  -   ```
+      [cs15lwi23atn@ieng6-202]:skill-demo1-data:316$ less -m  written_2/travel_guides/berlitz2/PuertoRico-History.txt
+        A Brief history
+        The First Puerto Ricans
+        The island<E2><80><99>s earliest known inhabitants, Indians now called Arca<C3><AD>cos (<E2><80><9C>the ancients<E2><80><9D>), were primitive fishermen. More than 2,000 years ago they were conquered by another tribe called the Igneri who had mastered farming and potterymaking. The final stage of Indian advancement began while Europe was in the Middle Ages: the Ta<C3>   
+        <AD>no Indians, a peaceful people native to Venezuela, traveled up through the chain of the Lesser Antilles and settled the 
+        island they called Borinqu<C3><A9>n. They lived in thatched houses, hunted and farmed, and worked ceramics and textiles with great skill. Several of their ceremonial <E2><80><9C>ball courts,<E2><80><9D> which were used for certain social or religious gatherings, have been discovered throughout Puerto Rico. The Ta<C3><AD>nos feared an evil spirit, Jurac<C3><A1>n, who was responsible for violent storms and gave his name to the tropical hurricanes of the West Indies. They also feared an earthly evil: the Carib Indians, who periodically raided their land for loot and captives. The Ta<C3><AD>nos<E2><80><99> fears were well founded. The word <E2><80><9C>cannibal<E2><80><9D> derives from Carib, a reminder of the way these marauders disposed 
+        of some prisoners.
+        The Arrival of the Europeans
+        On 19 November 1493, Columbus was lucky enough to be met by the kindly Ta<C3><AD>nos (in fact, the name Ta<C3><AD>no meant  
+        <E2><80><9C>friend<E2><80><9D> and was used by the Indians to enable the Europeans to distinguish between them and the not-so-friendly Caribs). The Ta<C3><AD>nos were the ones who introduced the Spanish to tobacco, corn on the cob, and that archetypal Caribbean mode of relaxation, the hammock.
+        Columbus christened the island San Juan Bautista (honoring St. John the Baptist). It was the first colonist, Juan Ponce de Le<C3><B3>n, who, admiring a bay on the north coast, declared it Puerto Rico (<E2><80><9C>rich port<E2><80><9D>). Sixteenth-century mapmakers back in Spain mistakenly confused the names, so that in the end the port became San Juan and the whole island was called a <E2><80><9C>rich port<E2><80><9D>; once on the maps, the names stuck.
+        A less innocent error was an American attempt to erase four centuries of Spanish history. After the conquest of 1898 the first US military governor ordered that the name be spelled Porto Rico. This semi-Italian corruption didn<E2><80><99>t last long. Today some nationalists still yearn for good old Borinqu<C3><A9>n, a name you<E2><80><99>ll see on many restaurants and bars.
+        Ponce de Le<C3><B3>n had received permission to found a Spanish colony on the island in 1508. For reasons of security, he settled a few miles inland from what is now San Juan. The site was swampy and mosquito-ridden, and, after a number of outbreaks of disease, his fellow colonists abandoned him and moved to the future capital city. They immediately began work on the formidable fortifications for which the city is still famous. Ponce de Le<C3><B3>n also suffered another setback. He became in
+        
+      written_2/travel_guides/berlitz2/PuertoRico-History.txt 21%
+      ```
+  -   ```
+      [cs15lwi23atn@ieng6-202]:skill-demo1-data:317$ less -m  written_2/travel_guides/berlitz1/HandRIbiza.txt
         Recommended Hotels
         The establishments listed below offer a cross-section of
         local restaurants, and should convince you that not everything on the
@@ -90,44 +107,9 @@ By doing some research and looking on the following websites: [https://www.howto
 
 
 
-    written_2/travel_guides/berlitz1/HandRIbiza.txt (file 1 of 2) (END) - Next: written_2/travel_guides/berlitz1/HandRIstanbul.txt
-    ```
-  - Hitting `:n` on the previous example before
-    ```
-        Recommended Hotels
-        Finding accommodation in Istanbul is rarely a problem, as
-        the city has recently seen a boom in the hotel business. However, if        
-        you want a room in a particular hotel, it is best to book, especially       
-        during July and August. The main hotel areas are Laleli, Aksaray, and       
-        Sultanahmet in the Old City, and around Taksim Square in Beyo<E2><80><98>lu.
-        Intense competition among the middle-range hotels means that you can        
-        often bargain for a lower rate, especially if you plan to stay for more     
-        than two nights.
-        As a basic guide we have used the symbols below to indicate
-        prices for a double room with bath, including breakfast:
-        <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81>over <C2><A3>130 ($200)
-        <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>80<E2><80><93>130 ($120-200)
-        <E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>50<E2><80><93>80 ($75-120)
-        <E2><9D><81><E2><9D><81><C2><A3>30<E2><80><93>50 ($45-75)
-        <E2><9D><81>below <C2><A3>30 ($45)
-
-
-
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    ~
-    written_2/travel_guides/berlitz1/HandRIstanbul.txt (file 2 of 2) (END)
-    ```
-  - You can open up multiple files with less using the above command. To go to the next file from the first use `:n` and to go back to the first file use `:p`. This can be useful when you want to quickly cross reference two files. Let's say you are writting a paper in one file and referring to facts in another file. By using less on both files you can quickly switch between them without having to exit and re-run less on the other file.
+      written_2/travel_guides/berlitz1/HandRIbiza.txt (END)
+      ```
+  - This command displays the file like normal, but will also give more infromation about how far you are into the file. For example, in the first file `PuertoRico-History.txt` when you first oepn the file you will be told that you are currently 21% of the way through the file. However in the other example with `HandRIbiza.txt`, the file is much shorter and can be displayed on just one screen, so there is no percentage displayed when using the command. This command can be useful to mark progress of reading through a file when you are editing, proof-reading, etc.
 - `less -X <file-name>` source: [https://linuxize.com/post/less-command-in-linux/](https://linuxize.com/post/less-command-in-linux/)
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:304$ less -X  written_2/travel_guides/berlitz2/PuertoRico-History.txt
