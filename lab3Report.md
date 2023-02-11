@@ -23,7 +23,8 @@ By doing some research and looking on the following websites: [https://www.howto
       8 English sea captains also came to know the beautiful but deserted BahEleutherian Adventurers, but life wa      8 amian islands during the 17th century. England<E2><80><99>s first forng honored for the effort. In 1666 a was named the first royal governor. Arriving in Nassau with a powerful      8 mal move was on 30 October 1629, when Charles I granted the Bahamas a was settled by Bermudians and renamtablishing some order. This incident inspired the national motto Expuls      8 nd a chunk of the American south to his Attorney General, Sir Robert  the Bahamas.                       mmerce Restored), which was retained until 1971.
       8 Health. But nothing came of that, nor of a rival French move in 1633 ands by Charles II, but for nearly 5ruptcy and debtor<E2><80><99>s prison in England. Before he died in Nas
       8 when Cardinal Richelieu, the 17th-century French statesman, tried cla
-    ```  
+    ```
+    - In this example we are looking through `Bahamas-History.txt` and numbers of each line are displayed on the left.
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:255$ less -N written_2/travel_guides/berlitz2/Nepal-History.txt
       1
@@ -46,6 +47,7 @@ By doing some research and looking on the following websites: [https://www.howto
      14 Nepal from Rajasthan rather than convert to Islam.
      15 Prithvi Narayan Shah captured Kathmandu and Patan in 1768 and Bhaktapur a year later. Before his death in 1775 he had brought under one rule all the territory from the Mahakali     15  River in the west to Sikkim and Darjeeling in the east. During the reign of his son, under a regent, the borders were pushed further north and west, provoking reactions from t     15 he Tibetans and Chinese as well as the British East India Company, the power to the south.
     ```
+    - In this example we are looking in the `Nepal-History.txt` file and have the numbers of each line displayed on the left.
   - This command numbers each line of the file on the side when viewing the file. A line is determined by the seperation of a new line character so it is possible that one paragraph could be on one line number which is why you may see multiple of the same number on the side. The use of this command could be when wanting to refer to specific line numbers when working with others to communicate which parts of the file you are talking about.
 - `less -p "search-term" <file-name>` source: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/)
   - ```
@@ -59,6 +61,7 @@ By doing some research and looking on the following websites: [https://www.howto
 
 
     ``` 
+    - In this example, we are searching for the string `"excluding wine"` in the `HandRIbiza` file.
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:268$ less -p "breakfast" written_2/travel_guides/berlitz1/HandRIstanbul.txt
         prices for a double room with bath, including breakfast:
@@ -71,6 +74,7 @@ By doing some research and looking on the following websites: [https://www.howto
 
 
     ```
+    - In this example, we are searching for the string `"breakfast"` in the `HandRIstanbul.txt` file.
   - This command allows us to search a file for the given string and open up the file on the line that string is on. It will put you on the first instance of that string but will highlight all instances of the string within the file upon opening. This command can be useful in bookmarking where you left off in reading a file if you remeber a specific phrase or piece of text. It could also be useful in seeing where all the instances of a string could be in a file if you misspelled a word in the file and had to go search for all the misspellings.
 - `less -m <file-name>`[https://www.tutorialspoint.com/unix_commands/less.htm](https://www.tutorialspoint.com/unix_commands/less.htm)
   -   ```
@@ -90,6 +94,7 @@ By doing some research and looking on the following websites: [https://www.howto
         
       written_2/travel_guides/berlitz2/PuertoRico-History.txt 21%
       ```
+      - In this example, we are looking in the `PuertoRico-History.txt` file and we can see that we are 21% through the file.
   -   ```
       [cs15lwi23atn@ieng6-202]:skill-demo1-data:317$ less -m  written_2/travel_guides/berlitz1/HandRIbiza.txt
         Recommended Hotels
@@ -109,6 +114,7 @@ By doing some research and looking on the following websites: [https://www.howto
 
       written_2/travel_guides/berlitz1/HandRIbiza.txt (END)
       ```
+      - In this example, we are looking in the `HandRIbiza.txt` file and no percentage is displayed.
   - This command displays the file like normal, but will also give more infromation about how far you are into the file. For example, in the first file `PuertoRico-History.txt` when you first oepn the file you will be told that you are currently 21% of the way through the file. However in the other example with `HandRIbiza.txt`, the file is much shorter and can be displayed on just one screen, so there is no percentage displayed when using the command. This command can be useful to mark progress of reading through a file when you are editing, proof-reading, etc.
 - `less -X <file-name>` source: [https://linuxize.com/post/less-command-in-linux/](https://linuxize.com/post/less-command-in-linux/)
   - ```
@@ -128,6 +134,7 @@ By doing some research and looking on the following websites: [https://www.howto
 
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:305$
     ```
+    - In this example, after we exit from `less` we can still see the most recent page of `PuertoRico-History.txt` on the screen above the prompt for a new command line input.
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:310$ less -X  written_2/travel_guides/berlitz2/Cuba-History.txt
     A Brief History
@@ -150,5 +157,6 @@ By doing some research and looking on the following websites: [https://www.howto
     After 1933 Fulgencio Batista, though only a sergeant, orchestrated the strings of power through a series of puppet presidents before winning the presidency outright in 1940. He retired in 1944 but returned by staging a military coup in 1952. His venal dictatorship made it possible for him to invest some $300 million abroad by 1959.
 
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:311$
-    ``` 
+    ```
+    - In this example, after we exit from `less` we can still see the most recent page of `Cuba-History.txt` on the screen above the prompt for a new command line input.
   - This command keeps leaves the last page displayed from the file on the screen after exiting `less`. This can be useful if you have certain terms or commands in the file you were looking at that you would then want to run in the command line. This helps if you forgot what file you were looking at or what the contents of the file were and need a specific reference right away. 
