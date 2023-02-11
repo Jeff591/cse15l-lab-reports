@@ -2,8 +2,8 @@
 ## Researching the less command
 To recap on what the `less` command allows us to do, it allows us to view the contents of a file by displaying a porition of the file on scrren and giving us the option to scroll using the up or down arrow keys. If we want to leave the view, we just hit q.
 
-By doing some research and looking on the following websites: (https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/) and (https://linuxize.com/post/less-command-in-linux/), we will talk about the some commands and use them on the `./written` directory:
-- `less -N <file-name>` source: https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/
+By doing some research and looking on the following websites: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/) and [https://linuxize.com/post/less-command-in-linux/](https://linuxize.com/post/less-command-in-linux/), we will talk about the some commands and use them on the `./written` directory:
+- `less -N <file-name>` source: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/)
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:254$ less -N written_2/travel_guides/berlitz2/Bahamas-History.txt
       1
@@ -47,7 +47,7 @@ By doing some research and looking on the following websites: (https://www.howto
      15 Prithvi Narayan Shah captured Kathmandu and Patan in 1768 and Bhaktapur a year later. Before his death in 1775 he had brought under one rule all the territory from the Mahakali     15  River in the west to Sikkim and Darjeeling in the east. During the reign of his son, under a regent, the borders were pushed further north and west, provoking reactions from t     15 he Tibetans and Chinese as well as the British East India Company, the power to the south.
     ```
   - This command numbers each line of the file on the side when viewing the file. A line is determined by the seperation of a new line character so it is possible that one paragraph could be on one line number which is why you may see multiple of the same number on the side. The use of this command could be when wanting to refer to specific line numbers when working with others to communicate which parts of the file you are talking about.
-- `less -p "search-term" <file-name>` source: https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/
+- `less -p "search-term" <file-name>` source: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/)
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:266$ less -p "excluding wine" written_2/travel_guides/berlitz1/HandRIbiza.txt
         expect to pay for a three-course meal for two, excluding wine, tax and
@@ -72,7 +72,7 @@ By doing some research and looking on the following websites: (https://www.howto
 
     ```
   - This command allows us to search a file for the given string and open up the file on the line that string is on. It will put you on the first instance of that string but will highlight all instances of the string within the file upon opening. This command can be useful in bookmarking where you left off in reading a file if you remeber a specific phrase or piece of text. It could also be useful in seeing where all the instances of a string could be in a file if you misspelled a word in the file and had to go search for all the misspellings.
-- `less <file-name1> <file-name2>` source: https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/
+- `less <file-name1> <file-name2>` source: [https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/](https://www.howtogeek.com/444233/how-to-use-the-less-command-on-linux/)
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:297$ less written_2/travel_guides/berlitz1/HandRIbiza.txt written_2/travel_guides/berlitz1/HandRIstanbul.txt
         Recommended Hotels
@@ -109,7 +109,7 @@ By doing some research and looking on the following websites: (https://www.howto
         <E2><9D><81><E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>80<E2><80><93>130 ($120-200)
         <E2><9D><81><E2><9D><81><E2><9D><81><C2><A3>50<E2><80><93>80 ($75-120)
         <E2><9D><81><E2><9D><81><C2><A3>30<E2><80><93>50 ($45-75)
-        <E2><9D><81>below <C2><A3>30 ($45
+        <E2><9D><81>below <C2><A3>30 ($45)
 
 
 
@@ -128,7 +128,7 @@ By doing some research and looking on the following websites: (https://www.howto
     written_2/travel_guides/berlitz1/HandRIstanbul.txt (file 2 of 2) (END)
     ```
   - You can open up multiple files with less using the above command. To go to the next file from the first use `:n` and to go back to the first file use `:p`. This can be useful when you want to quickly cross reference two files. Let's say you are writting a paper in one file and referring to facts in another file. By using less on both files you can quickly switch between them without having to exit and re-run less on the other file.
-- `less -X <file-name>` source: https://linuxize.com/post/less-command-in-linux/
+- `less -X <file-name>` source: [https://linuxize.com/post/less-command-in-linux/](https://linuxize.com/post/less-command-in-linux/)
   - ```
     [cs15lwi23atn@ieng6-202]:skill-demo1-data:304$ less -X  written_2/travel_guides/berlitz2/PuertoRico-History.txt
     A Brief history
