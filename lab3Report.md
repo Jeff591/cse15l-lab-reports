@@ -46,7 +46,7 @@ By doing some research and looking on the following websites: (https://www.howto
      14 Nepal from Rajasthan rather than convert to Islam.
      15 Prithvi Narayan Shah captured Kathmandu and Patan in 1768 and Bhaktapur a year later. Before his death in 1775 he had brought under one rule all the territory from the Mahakali     15  River in the west to Sikkim and Darjeeling in the east. During the reign of his son, under a regent, the borders were pushed further north and west, provoking reactions from t     15 he Tibetans and Chinese as well as the British East India Company, the power to the south.
     ```
-  - This command numbers each line of the file on the side when viewing the file. A line is determined by the seperation of a new line character so it is possible that one paragraph could be on one line number which is why you may see multiple of the same number on the side.
+  - This command numbers each line of the file on the side when viewing the file. A line is determined by the seperation of a new line character so it is possible that one paragraph could be on one line number which is why you may see multiple of the same number on the side. The use of this command could be when wanting to refer to specific line numbers when working with others to communicate which parts of the file you are talking about.
 - `less -p<search-term> <file-name>`
 - `less -s <file-name>`
 - `less -X <file-name>`
