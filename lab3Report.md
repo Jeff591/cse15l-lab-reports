@@ -76,7 +76,7 @@ By doing some research and looking on the following websites: [https://www.howto
     ```
     - In this example, we are searching for the string `"breakfast"` in the `HandRIstanbul.txt` file.
   - This command allows us to search a file for the given string and open up the file on the line that string is on. It will put you on the first instance of that string but will highlight all instances of the string within the file upon opening. This command can be useful in bookmarking where you left off in reading a file if you remeber a specific phrase or piece of text. It could also be useful in seeing where all the instances of a string could be in a file if you misspelled a word in the file and had to go search for all the misspellings.
-- `less -m <file-name>`[https://www.tutorialspoint.com/unix_commands/less.htm](https://www.tutorialspoint.com/unix_commands/less.htm)
+- `less -m <file-name>` source: [https://www.tutorialspoint.com/unix_commands/less.htm](https://www.tutorialspoint.com/unix_commands/less.htm)
   -   ```
       [cs15lwi23atn@ieng6-202]:skill-demo1-data:316$ less -m  written_2/travel_guides/berlitz2/PuertoRico-History.txt
         A Brief history
