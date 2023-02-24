@@ -22,7 +22,9 @@
     - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
     - It took 16 up arrow presses to access the `cd lab7` command in the search history, it took another 3 up arrow presses to access the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java ListExamplesTests.java` command, and it took another 13 up arrow presses to access the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` command. 
 7. Edit the code file to fix the failing test
-    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><enter>`, `<ctrl^W><<>< ><0><enter>`
+    - ![image](https://user-images.githubusercontent.com/67081225/221308431-6a34cc22-a433-44ee-b7e4-b95bb9ad75c7.png)
+    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><enter>`, `<ctrl+W><<>< ><0><enter><right><=><ctrl+W><r><e><t><u><r><n><enter><up><up><right><right><right><right><right><right><right><right><backspace><2><ctrl+O><crtl+X>`
+    - It took 9 up arrow key presses to access to the `nano ListExamples.java` command. Once in the file, I used `<ctrl+W>` and searched for `< 0` then appended an `=` to the end of the `<`. Then I used `<ctrl+W>` and searched for `return` and then navigated up and to the right to then change `index1` to `index2`. Once the edits were done, I saved using `<ctrl+O>` and exited using `<ctrl+X>`.
 8. Run the tests, demonstrating that they now succeed
     - asdf
 9. Commit and push the resulting change to your Github account
