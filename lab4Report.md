@@ -26,6 +26,10 @@
     - Keys Pressed: `<up><up><up><up><up><up><up><up><up><enter>`, `<ctrl+W><<>< ><0><enter><right><=><ctrl+W><r><e><t><u><r><n><enter><up><up><right><right><right><right><right><right><right><right><backspace><2><ctrl+O><crtl+X>`
     - It took 9 up arrow key presses to access to the `nano ListExamples.java` command. Once in the file, I used `<ctrl+W>` and searched for `< 0` then appended an `=` to the end of the `<`. Then I used `<ctrl+W>` and searched for `return` and then navigated up and to the right to then change `index1` to `index2`. Once the edits were done, I saved using `<ctrl+O>` and exited using `<ctrl+X>`.
 8. Run the tests, demonstrating that they now succeed
-    - asdf
+    - ![image](https://user-images.githubusercontent.com/67081225/221323883-f99b47a9-6c2f-4992-9e00-bf2a78e4118d.png)
+    - Keys Pressed: `<up><up><up><up><up><enter>`, `<up><up><up><up><up><enter>`
+    - It took 5 up arrow presses to access the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java ListExamplesTests.java` command, and it took another 5 up arrow presses to access the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar
 9. Commit and push the resulting change to your Github account
-    - asdf
+    - ![image](https://user-images.githubusercontent.com/67081225/221324358-3c3d8624-f1ba-4d14-b2bb-a6f185b2a24a.png)
+    - Key Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
+    - It took 17 up presses to get to the `git add ListExamples.java` command, 17 more up presses to get to the `git commit -m "Fiexed"` command, and a final 17 more up presses to get to the `git push` command in the search history.
