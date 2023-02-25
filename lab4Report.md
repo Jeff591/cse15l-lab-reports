@@ -31,5 +31,5 @@
     - It took 5 up arrow presses to access the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java ListExamplesTests.java` command, and it took another 5 up arrow presses to access the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar
 9. Commit and push the resulting change to your Github account
     - ![image](https://user-images.githubusercontent.com/67081225/221324358-3c3d8624-f1ba-4d14-b2bb-a6f185b2a24a.png)
-    - Key Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
+    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
     - It took 17 up presses to get to the `git add ListExamples.java` command, 17 more up presses to get to the `git commit -m "Fiexed"` command, and a final 17 more up presses to get to the `git push` command in the search history.
