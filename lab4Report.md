@@ -15,8 +15,8 @@
     - The `ssh` command was 1 up in the search history and I pressed enter to run the command. The reason why we do not have to type in a password for logging in is because in lab of week 7 we generated an SSH key on our local terminal and then copied the path of the key into the `.ssh` directory where we store `authorized_keys`. Then on our local computer we run the `scp <path to your public SSH key> cs15lwi23atn@ieng6.ucsd.edu:~/.ssh/authorized_keys` and enter our password when prompted, which then allows us to log in to the remote account from the current local machine without having to retype the password.
 5. Clone your fork of the repository from your Github account
     - ![image](https://user-images.githubusercontent.com/67081225/221303937-8f06ddaa-a47e-45a8-ba6b-af73a388446b.png)
-    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
-    - The  `git clone` command was 15 up in the search history so I used the up arrow to access it and pressed enter afterwards to run it.
+    - Keys Pressed: `<ctrl+R><g><enter>`
+    - To find the `git clone` command, i used `<ctrl+R>` to open up reverse-i-search. Then I typed in `<g>` and the first command that showed up was `git clone git@github.com:Jeff591/lab7.git`. Once the command was pulled up, I pressed enter to run the command and clone the repository. 
 6. Run the tests, demonstrating that they fail
     - ![image](https://user-images.githubusercontent.com/67081225/221304636-3e9fa966-11e5-462a-a964-6cf628915a42.png)
     - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
