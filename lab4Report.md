@@ -18,12 +18,13 @@
     - Keys Pressed: `<ctrl+R><g><enter>`
     - To find the `git clone` command, i used `<ctrl+R>` to open up reverse-i-search. Then I typed in `<g>` and the first command that showed up was `git clone git@github.com:Jeff591/lab7.git`. Once the command was pulled up, I pressed enter to run the command and clone the repository. 
 6. Run the tests, demonstrating that they fail
-    - ![image](https://user-images.githubusercontent.com/67081225/221304636-3e9fa966-11e5-462a-a964-6cf628915a42.png)
-    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
-    - It took 16 up arrow presses to access the `cd lab7` command in the search history, it took another 3 up arrow presses to access the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java ListExamplesTests.java` command, and it took another 13 up arrow presses to access the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` command. 
+    - ![image](https://user-images.githubusercontent.com/67081225/223595756-18b96724-466e-4c88-9ad9-2e64377b4a2b.png)
+    - ![image](https://user-images.githubusercontent.com/67081225/223595820-f3a869d5-0828-4af8-ba38-d670ca2f7008.png)
+    - Keys Pressed: `<c><d><l><a><b><7><enter>`, `<ctrl+R><j><a><v><a><c><enter>`, `<h><i><s><t><o><r><y><space><|><space><g><r><e><p><space><"><j><a><v><a><space><-><c><p><"><ctrl+C><ctrl+V><enter>`
+    - Since `cd lab7` is a short command I just typed the command out and hit enter. For the command `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java`, I used `<ctrl+R>` and looked for `javac` which brought up the command and allowed me to hit enter. For the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` command, I used `history | grep "java -cp"` to search up the command. Once I found it, I copied and pasted the command using `<ctrl+C><ctrl+V>` and pressed enter to run it. 
 7. Edit the code file to fix the failing test
     - ![image](https://user-images.githubusercontent.com/67081225/221308431-6a34cc22-a433-44ee-b7e4-b95bb9ad75c7.png)
-    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><enter>`, `<ctrl+W><<>< ><0><enter><right><=><ctrl+W><r><e><t><u><r><n><enter><up><up><right><right><right><right><right><right><right><right><backspace><2><ctrl+O><crtl+X>`
+    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><enter>`, `<ctrl+W><<><space><0><enter><right><=><ctrl+W><r><e><t><u><r><n><enter><up><up><right><right><right><right><right><right><right><right><backspace><2><ctrl+O><crtl+X>`
     - It took 9 up arrow key presses to access to the `nano ListExamples.java` command. Once in the file, I used `<ctrl+W>` and searched for `< 0` then appended an `=` to the end of the `<`. Then I used `<ctrl+W>` and searched for `return` and then navigated up and to the right to then change `index1` to `index2`. Once the edits were done, I saved using `<ctrl+O>` and exited using `<ctrl+X>`.
 8. Run the tests, demonstrating that they now succeed
     - ![image](https://user-images.githubusercontent.com/67081225/221323883-f99b47a9-6c2f-4992-9e00-bf2a78e4118d.png)
