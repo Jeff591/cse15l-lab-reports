@@ -12,7 +12,7 @@
 4. Log into ieng6
     - ![image](https://user-images.githubusercontent.com/67081225/221303388-86119fa9-c10b-42a9-b062-dbab2767723c.png)
     - Keys Pressed: `<up><enter>`
-    - The `ssh` command was 1 up in the search history and I pressed enter to run the command.
+    - The `ssh` command was 1 up in the search history and I pressed enter to run the command. The reason why we do not have to type in a password for logging in is because in lab of week 7 we generated an SSH key on our local terminal and then copied the path of the key into the `.ssh` directory where we store `authorized_keys`. Then on our local computer we run the `scp <path to your public SSH key> cs15lwi23atn@ieng6.ucsd.edu:~/.ssh/authorized_keys` and enter our password when prompted, which then allows us to log in to the remote account from the current local machine without having to retype the password.
 5. Clone your fork of the repository from your Github account
     - ![image](https://user-images.githubusercontent.com/67081225/221303937-8f06ddaa-a47e-45a8-ba6b-af73a388446b.png)
     - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
