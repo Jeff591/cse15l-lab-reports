@@ -34,3 +34,7 @@
     - ![image](https://user-images.githubusercontent.com/67081225/223597154-a842182d-46b3-477f-a25c-2d115824b97a.png)
     - Keys Pressed: `<ctrl+R><g><i><t><space><a><enter>`, `<ctrl+R><g><i><t><space><c><enter>`, `<ctrl+R><g><i><t><space><p><enter>`
     - To get the command `git add ListExamples.java`, I used `<ctrl+R>` and typed `git a` which brought up the most recent git add command. In a similar way I used `<ctrl+R>` to get the commands `git commit -m "Fixed"` and `git push`. After getting each of the commands I hit enter to run them. These commands allow the changes made on our remote account to show up on our GitHub repository.
+
+## Results
+![image](https://user-images.githubusercontent.com/67081225/223599251-3685148b-a464-40b3-9198-06e6a0c6ef72.png)
+ 
