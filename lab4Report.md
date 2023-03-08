@@ -27,10 +27,10 @@
     - Keys Pressed: `<up><up><up><up><up><up><up><up><up><enter>`, `<ctrl+W><<><space><0><enter><right><=><ctrl+W><r><e><t><u><r><n><enter><up><up><right><right><right><right><right><right><right><right><backspace><2><ctrl+O><crtl+X>`
     - It took 9 up arrow key presses to access to the `nano ListExamples.java` command. Once in the file, I used `<ctrl+W>` and searched for `< 0` then appended an `=` to the end of the `<`. Then I used `<ctrl+W>` and searched for `return` and then navigated up and to the right to then change `index1` to `index2`. Once the edits were done, I saved using `<ctrl+O>` and exited using `<ctrl+X>`.
 8. Run the tests, demonstrating that they now succeed
-    - ![image](https://user-images.githubusercontent.com/67081225/221323883-f99b47a9-6c2f-4992-9e00-bf2a78e4118d.png)
+    - ![image](https://user-images.githubusercontent.com/67081225/223596770-c376d611-c63b-4956-a284-5b0951ed6f61.png)
     - Keys Pressed: `<up><up><up><up><up><enter>`, `<up><up><up><up><up><enter>`
-    - It took 5 up arrow presses to access the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar ListExamples.java ListExamplesTests.java` command, and it took another 5 up arrow presses to access the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar
+    - It took 5 up arrow presses to access the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` command, and it took another 5 up arrow presses to access the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` in search history.
 9. Commit and push the resulting change to your Github account
-    - ![image](https://user-images.githubusercontent.com/67081225/221324358-3c3d8624-f1ba-4d14-b2bb-a6f185b2a24a.png)
-    - Keys Pressed: `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`, `<up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><up><enter>`
-    - It took 17 up presses to get to the `git add ListExamples.java` command, 17 more up presses to get to the `git commit -m "Fiexed"` command, and a final 17 more up presses to get to the `git push` command in the search history.
+    - ![image](https://user-images.githubusercontent.com/67081225/223597154-a842182d-46b3-477f-a25c-2d115824b97a.png)
+    - Keys Pressed: `<ctrl+R><g><i><t><space><a><enter>`, `<ctrl+R><g><i><t><space><c><enter>`, `<ctrl+R><g><i><t><space><p><enter>`
+    - To get the command `git add ListExamples.java`, I used `<ctrl+R>` and typed `git a` which brought up the most recent git add command. In a similar way I used `<ctrl+R>` to get the commands `git commit -m "Fixed"` and `git push`. After getting each of the commands I hit enter to run them. 
