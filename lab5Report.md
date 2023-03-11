@@ -31,7 +31,11 @@ I have also added an additional 2 tests for the `filter` method.
    - ![image](https://user-images.githubusercontent.com/67081225/224510728-7517e1e5-6ba1-4e3e-858a-d51fa23c7eb6.png)
 
 Now I will take some of the example student repositories from Lab 6 and run them with my grading script. I will use the following repositories:
- - 
+ - https://github.com/ucsd-cse15l-f22/list-methods-lab3
+   - ![image](https://user-images.githubusercontent.com/67081225/224512980-a80dd7aa-8db9-4153-88d7-a62c17c851aa.png)
+   - ![image](https://user-images.githubusercontent.com/67081225/224513234-0b46be0e-cdd6-4029-a091-9958ef1d1895.png)
+   - From the output of the autograder, we can see that the repository failed 3 or the 8 tests. By looking at `results.txt` within the `student-submission` directory we can see that the repository failed `testFilterFound`, `testMergeRightEnd`, and `testMergeEmptyLeft`.
+   - For `testFilterFound`, the test failed because the order of the filtered list were in the wrong order. For the other two tests, the program timed out. By looking in the code of `ListExamples.java` in the student submission, we can see that the `filter` method always adds a string to the front of the list when it should always be to the back of the list. In the `merge` method we can see that the method will never end because 1) there is no check to see if the values from both lists are equal for the first while loop and 2) the while loop for when list2 is the only list with elements left does not increment the correct index. 
 
 
 
