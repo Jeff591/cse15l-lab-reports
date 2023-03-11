@@ -11,4 +11,16 @@ After using ChatGPT for guidance on how to extract the number tests and the numb
  - First off, instead of storing values within text files like `success.txt` or `fails.txt`, I decided to use bash variables to store the contents of grep. To extract the number tests and failures from `results.txt`, I used the `grep -o` command which allows to only extract the given phrase of grep from the file. So for example, to get the number of tests I used the `NUMTESTS=$(grep -o 'Tests run: [0-9]*' results.txt | grep -o '[0-9]*')` where the first grep finds where in `results.txt` it can find the phrase `"Tests run: [0-9]"`. The `[0-9]*` is used to match zero or more occurances of any digit from 0 to 9. So when we use grep again after the `|`, we extract the actual number, and since the whole command is surrounded by `$()`, the output will be treated as a numerical value which will be stored in `NUMTESTS`. 
  - We do the same thing for `NUMFAILS` as well as `FULLPASS`. Note that either `NUMTEST`/`NUMFAILS` will be used or `FULLPASS` will be used as all three cannot occur at once from JUnit. So to check if the student recieved a full score, we can check if `FULLPASS` is not equal to 0. If it is, then we can say the student passed the interger value stored in `FULLPASS`. However if `FULLPASS` equals 0, then that means the student missed some tests so we will say that the student missed `NUMFAILS` fails our of `NUMTESTS` tests.
 
+Now that we have improved the grading script, I have added an additional 5 tests to `TestListExamples.java`
+ - First I made a test for when the left list is shorter than the right list (the opposite of the given test).
+   - ![image](https://user-images.githubusercontent.com/67081225/224509182-6ffe17cf-cd28-42b1-982c-e05c3a570d9b.png)
+ - The next two tests are for when either of the left or right lists are empty. The expected result should just be the non empty list
+   - ![image](https://user-images.githubusercontent.com/67081225/224509236-f0ae8bbe-c463-4580-99ce-d06089e56d63.png)
+ - The third type of test is for non-sequential lists of letters, but they are still in sorted order so the merged list should have all the characters sorted alphabetically.
+   - ![image](https://user-images.githubusercontent.com/67081225/224509299-e990ab44-4349-4c6b-921b-95b3478fa226.png)
+ - The final type of test is for non-sequential lists of digits that are in sorted order, similar to the previous test for letters.
+   - ![image](https://user-images.githubusercontent.com/67081225/224509336-fe742d63-af6c-4b9d-91aa-54bfc63eb04e.png)
+
+
+
 
