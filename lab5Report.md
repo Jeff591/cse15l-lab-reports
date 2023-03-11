@@ -11,7 +11,7 @@ After using ChatGPT for guidance on how to extract the number tests and the numb
  - First off, instead of storing values within text files like `success.txt` or `fails.txt`, I decided to use bash variables to store the contents of grep. To extract the number tests and failures from `results.txt`, I used the `grep -o` command which allows to only extract the given phrase of grep from the file. So for example, to get the number of tests I used the `NUMTESTS=$(grep -o 'Tests run: [0-9]*' results.txt | grep -o '[0-9]*')` where the first grep finds where in `results.txt` it can find the phrase `"Tests run: [0-9]"`. The `[0-9]*` is used to match zero or more occurances of any digit from 0 to 9. So when we use grep again after the `|`, we extract the actual number, and since the whole command is surrounded by `$()`, the output will be treated as a numerical value which will be stored in `NUMTESTS`. 
  - We do the same thing for `NUMFAILS` as well as `FULLPASS`. Note that either `NUMTEST`/`NUMFAILS` will be used or `FULLPASS` will be used as all three cannot occur at once from JUnit. So to check if the student recieved a full score, we can check if `FULLPASS` is not equal to 0. If it is, then we can say the student passed the interger value stored in `FULLPASS`. However if `FULLPASS` equals 0, then that means the student missed some tests so we will say that the student missed `NUMFAILS` fails our of `NUMTESTS` tests.
 
-Now that we have improved the grading script, I have added an additional 5 tests to `TestListExamples.java`
+Now that we have improved the grading script, I have added an additional 5 tests to `TestListExamples.java` to test the `merge` method.
  - First I made a test for when the left list is shorter than the right list (the opposite of the given test).
    - ![image](https://user-images.githubusercontent.com/67081225/224509182-6ffe17cf-cd28-42b1-982c-e05c3a570d9b.png)
  - The next two tests are for when either of the left or right lists are empty. The expected result should just be the non empty list
@@ -21,6 +21,17 @@ Now that we have improved the grading script, I have added an additional 5 tests
  - The final type of test is for non-sequential lists of digits that are in sorted order, similar to the previous test for letters.
    - ![image](https://user-images.githubusercontent.com/67081225/224509336-fe742d63-af6c-4b9d-91aa-54bfc63eb04e.png)
 
+I have also added an additional 2 tests for the `filter` method.
+ - The first test checks if `filter` found instances of the filter string in the given list. Then the filtered list should contain all strings from the original list that contained the filter string.
+   - ![image](https://user-images.githubusercontent.com/67081225/224510828-0ad5e8de-c8e0-43d5-8eb1-4684533f7432.png)
+ - The second test checks if `filter` cound not find any instances of the filter string in the given list. The expected output should be an empty list.
+   - ![image](https://user-images.githubusercontent.com/67081225/224511011-14509f9b-9e64-4b25-b5a3-2815d6ec08f4.png)    
+
+ - Note that I changed the `IsMoon` class to `IsString` to make it more generalized for all strings. I added a constructor so that I could send in any string I want as the filter. Also, instead of checking if the string is equal, I chose to check if any of the strings in the given list contain the filter string.
+   - ![image](https://user-images.githubusercontent.com/67081225/224510728-7517e1e5-6ba1-4e3e-858a-d51fa23c7eb6.png)
+
+Now I will take some of the example student repositories from Lab 6 and run them with my grading script. I will use the following repositories:
+ - 
 
 
 
