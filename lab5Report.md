@@ -119,6 +119,9 @@ Now I will take some of the example student repositories from Lab 6 and run them
    - For this repository, the student's submission is nested within a different directory than we expect so the autograder is not able to find the files required to run the tests. So the autograder says that it needs `ListExamples.java`.
 
 Now that we have run a few examples of repositories with our tests, the final thing we will do is make it so that the autograder can run on a server.
+ - We run the server with the https://github.com/ucsd-cse15l-f22/list-methods-corrected repository
+ - ![image](https://user-images.githubusercontent.com/67081225/224515717-25bb7cb1-61e9-4d9e-a6db-341d0136ec1c.png)
+ 
     
 
 
