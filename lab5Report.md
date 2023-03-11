@@ -7,8 +7,74 @@ During Lab 6, my lab group only had the time to create a grading script with the
  - As you can see from the code and example repositories used with the grading script, `grade.sh`, our grading script only provides a pass or fail score based on the 1 test. For this Lab Report, I want to make the grading script more robust by providing numbers so that the student knows how many test they passed/failed and I want to write more tests in addition to the one provided in the starter code. 
 
 After using ChatGPT for guidance on how to extract the number tests and the number of failed tests from the output of JUnit, I edited the code within `grade.sh` to produce the following:
- - ![image](https://user-images.githubusercontent.com/67081225/224467350-85a746a8-bb4c-41a7-80d8-7fc0404678b5.png)
- - First off, instead of storing values within text files like `success.txt` or `fails.txt`, I decided to use bash variables to store the contents of grep. To extract the number tests and failures from `results.txt`, I used the `grep -o` command which allows to only extract the given phrase of grep from the file. So for example, to get the number of tests I used the `NUMTESTS=$(grep -o 'Tests run: [0-9]*' results.txt | grep -o '[0-9]*')` where the first grep finds where in `results.txt` it can find the phrase `"Tests run: [0-9]"`. The `[0-9]*` is used to match zero or more occurances of any digit from 0 to 9. So when we use grep again after the `|`, we extract the actual number, and since the whole command is surrounded by `$()`, the output will be treated as a numerical value which will be stored in `NUMTESTS`. 
+ - ```
+   CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+   rm -rf student-submission
+   git clone $1 student-submission
+   echo 'Finished cloning'
+
+   cd student-submission
+
+   if [[ -f ListExamples.java ]]
+   then
+       echo "ListExamples found"
+   else
+       echo "need file ListExamples.java"
+       exit 1
+   fi
+
+   FILTER= $(grep "static List<String> filter(List<String> list, StringChecker sc)" ListExamples.java)          
+   if [[ -n "$FILTER" ]]
+   then
+      echo
+   else
+      echo "filter method header is incorrect"
+      exit 1
+   fi
+   
+   MERGE= $(grep "static List<String> merge(List<String> list1, List<String> list2)" ListExamples.java)     
+   if [[ -n "$MERGE" ]]
+   then
+      echo
+   else
+      echo "merge method header is incorrect"
+      exit 1
+   fi
+
+   cp ../TestListExamples.java ./
+   cp ../Server.java ./
+   cp ../GradeServer.java ./
+   mkdir lib
+   cp ../lib/hamcrest-core-1.3.jar lib/
+   cp ../lib/junit-4.13.2.jar lib/
+
+
+   javac -cp $CPATH *.java
+   if [[ -f ListExamples.class ]] && [[ -f TestListExamples.class ]]
+   then
+       echo "Compiled files"
+   else
+       echo "Files did not compile correctly"
+       exit 1
+   fi
+
+   java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > results.txt
+   NUMTESTS=$(grep -o 'Tests run: [0-9]*' results.txt | grep -o '[0-9]*')
+   NUMFAILS=$(grep -o 'Failures: [0-9]*' results.txt | grep -o '[0-9]*')
+
+   FULLPASS=$(grep 'OK ([0-9]*' results.txt | grep -o '[0-9]*')
+   if [[ $FULLPASS -ne 0 ]]
+   then
+       echo "You Passed all ${FULLPASS} tests"
+       exit 1
+   else
+       echo "You missed ${NUMFAILS} out of ${NUMTESTS} tests"
+       exit 1
+   fi
+   ```
+ - First off, to account for incorrect method headers in the student submissions, I check that the method headers for `filter` and `merge` are correctly written in `ListExamples.java` so that the autograder does not produce problems when trying to run methods.
+ - Secondly, instead of storing values within text files like `success.txt` or `fails.txt`, I decided to use bash variables to store the contents of grep. To extract the number tests and failures from `results.txt`, I used the `grep -o` command which allows to only extract the given phrase of grep from the file. So for example, to get the number of tests I used the `NUMTESTS=$(grep -o 'Tests run: [0-9]*' results.txt | grep -o '[0-9]*')` where the first grep finds where in `results.txt` it can find the phrase `"Tests run: [0-9]"`. The `[0-9]*` is used to match zero or more occurances of any digit from 0 to 9. So when we use grep again after the `|`, we extract the actual number, and since the whole command is surrounded by `$()`, the output will be treated as a numerical value which will be stored in `NUMTESTS`. 
  - We do the same thing for `NUMFAILS` as well as `FULLPASS`. Note that either `NUMTEST`/`NUMFAILS` will be used or `FULLPASS` will be used as all three cannot occur at once from JUnit. So to check if the student recieved a full score, we can check if `FULLPASS` is not equal to 0. If it is, then we can say the student passed the interger value stored in `FULLPASS`. However if `FULLPASS` equals 0, then that means the student missed some tests so we will say that the student missed `NUMFAILS` fails our of `NUMTESTS` tests.
 
 Now that we have improved the grading script, I have added an additional 5 tests to `TestListExamples.java` to test the `merge` method.
@@ -35,7 +101,25 @@ Now I will take some of the example student repositories from Lab 6 and run them
    - ![image](https://user-images.githubusercontent.com/67081225/224512980-a80dd7aa-8db9-4153-88d7-a62c17c851aa.png)
    - ![image](https://user-images.githubusercontent.com/67081225/224513234-0b46be0e-cdd6-4029-a091-9958ef1d1895.png)
    - From the output of the autograder, we can see that the repository failed 3 or the 8 tests. By looking at `results.txt` within the `student-submission` directory we can see that the repository failed `testFilterFound`, `testMergeRightEnd`, and `testMergeEmptyLeft`.
-   - For `testFilterFound`, the test failed because the order of the filtered list were in the wrong order. For the other two tests, the program timed out. By looking in the code of `ListExamples.java` in the student submission, we can see that the `filter` method always adds a string to the front of the list when it should always be to the back of the list. In the `merge` method we can see that the method will never end because 1) there is no check to see if the values from both lists are equal for the first while loop and 2) the while loop for when list2 is the only list with elements left does not increment the correct index. 
+   - For `testFilterFound`, the test failed because the order of the filtered list were in the wrong order. For the other two tests, the program timed out. By looking in the code of `ListExamples.java` in the student submission, we can see that the `filter` method always adds a string to the front of the list when it should always be to the back of the list. In the `merge` method we can see that the method will never end because 1) there is no check to see if the values from both lists are equal for the first while loop and 2) the while loop for when list2 is the only list with elements left does not increment the correct index.
+ - https://github.com/ucsd-cse15l-f22/list-methods-corrected
+   - ![image](https://user-images.githubusercontent.com/67081225/224513651-0bf7026c-c850-41a1-ab26-aec9c78405fc.png)
+   - As expected, this repository passes all the tests from the autograder.
+ - https://github.com/ucsd-cse15l-f22/list-methods-compile-error
+   - ![image](https://user-images.githubusercontent.com/67081225/224513735-964716af-71b9-4fd7-a1bc-1b71d5243cac.png)
+   - For this repository, there is a compiler error due to a missing semicolon. So the autograder reports the error and states that files did not compile correctly, so the tests from JUnit do not run at all.
+ - https://github.com/ucsd-cse15l-f22/list-methods-signature
+   - ![image](https://user-images.githubusercontent.com/67081225/224514908-169956bf-a350-40a8-b5b6-b47d8249ad40.png)
+   - For this repository, the method header of `filter` has the parameters switched around. The autograder catches this and tells the student that their `filter` method header is incorrect.
+ - https://github.com/ucsd-cse15l-f22/list-methods-filename
+   - ![image](https://user-images.githubusercontent.com/67081225/224515038-7a8036ac-14bd-49fa-806e-7a02c1e9e196.png)
+   - For this repository, the name of the file that contains `ListExamples` is named incorrectly, so the autograder will catch this and say that `ListExamples.java` is needed to run the tests.
+ - https://github.com/ucsd-cse15l-f22/list-methods-nested
+   - ![image](https://user-images.githubusercontent.com/67081225/224515141-a385c839-10be-4e50-9d85-96d670402c9f.png)
+   - For this repository, the student's submission is nested within a different directory than we expect so the autograder is not able to find the files required to run the tests. So the autograder says that it needs `ListExamples.java`.
+
+Now that we have run a few examples of repositories with our tests, the final thing we will do is make it so that the autograder can run on a server.
+    
 
 
 
