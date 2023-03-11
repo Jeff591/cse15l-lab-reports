@@ -24,19 +24,19 @@ After using ChatGPT for guidance on how to extract the number tests and the numb
        exit 1
    fi
 
-   FILTER= $(grep "static List<String> filter(List<String> list, StringChecker sc)" ListExamples.java)          
-   if [[ -n "$FILTER" ]]
+   FILTER= $(grep -q "static List<String> filter(List<String> list, StringChecker sc)" ListExamples.java)          
+   if [[ $FILTER -eq 0 ]]
    then
-      echo
+      cd ./
    else
       echo "filter method header is incorrect"
       exit 1
    fi
    
-   MERGE= $(grep "static List<String> merge(List<String> list1, List<String> list2)" ListExamples.java)     
-   if [[ -n "$MERGE" ]]
+   MERGE= $(grep -q "static List<String> merge(List<String> list1, List<String> list2)" ListExamples.java)     
+   if [[ $MERGE -eq 0 ]]
    then
-      echo
+      cd ./
    else
       echo "merge method header is incorrect"
       exit 1
