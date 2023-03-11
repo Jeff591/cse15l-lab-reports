@@ -1,7 +1,52 @@
 # CSE 15L - Lab Report 5
 ## Finishing Up the Grading Script from Lab 6
 During Lab 6, my lab group only had the time to create a grading script with the 1 test provided with the starter code. Here is the code that we had with our initial grading script:
- - ![image](https://user-images.githubusercontent.com/67081225/224467139-52ce3b05-f0a1-4b13-b9ad-878740e7ae40.png)
+ - ```
+   CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
+
+   rm -rf student-submission
+   git clone $1 student-submission
+   echo 'Finished cloning'
+
+   cd student-submission
+
+   if [[ -f ListExamples.java ]]
+   then
+       echo "ListExamples found"
+   else 
+       echo "need file ListExamples.java"
+       exit 1
+   fi
+
+   cp ../TestListExamples.java ./
+   cp ../Server.java ./
+   cp ../GradeServer.java ./
+   mkdir lib
+   cp ../lib/hamcrest-core-1.3.jar lib/
+   cp ../lib/junit-4.13.2.jar lib/
+
+
+   javac -cp $CPATH *.java
+   if [[ -f ListExamples.class ]] && [[ -f TestListExamples.class ]]
+   then
+       echo "Compiled files"
+   else
+       echo "Files did not compile correctly"
+       exit 1
+   fi
+
+   java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > results.txt
+   grep "Tests run: " results.txt > fails.txt
+   grep "OK (" results.txt > success.txt
+   if [[ "./fails.txt" == `find ./ -type f -empty` ]]
+   then
+       echo "You Passed"
+       exit 1
+   else
+       echo "You failed"
+       exit 1
+   fi
+   ```
  - ![image](https://user-images.githubusercontent.com/67081225/224467186-8d7dcf9e-0259-410f-b2e1-e79b2fe6d7e2.png)
  - ![image](https://user-images.githubusercontent.com/67081225/224467197-f66c80d7-3220-488d-a95b-ade132368dad.png)
  - As you can see from the code and example repositories used with the grading script, `grade.sh`, our grading script only provides a pass or fail score based on the 1 test. For this Lab Report, I want to make the grading script more robust by providing numbers so that the student knows how many test they passed/failed and I want to write more tests in addition to the one provided in the starter code. 
