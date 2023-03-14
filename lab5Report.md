@@ -142,29 +142,29 @@ I have also added an additional 2 tests for the `filter` method.
    - ![image](https://user-images.githubusercontent.com/67081225/224510728-7517e1e5-6ba1-4e3e-858a-d51fa23c7eb6.png)
 
 Now I will take some of the example student repositories from Lab 6 and run them with my grading script. I will use the following repositories:
- - https://github.com/ucsd-cse15l-f22/list-methods-lab3
+ - [https://github.com/ucsd-cse15l-f22/list-methods-lab3](https://github.com/ucsd-cse15l-f22/list-methods-lab3) 
    - ![image](https://user-images.githubusercontent.com/67081225/224512980-a80dd7aa-8db9-4153-88d7-a62c17c851aa.png)
    - ![image](https://user-images.githubusercontent.com/67081225/224513234-0b46be0e-cdd6-4029-a091-9958ef1d1895.png)
    - From the output of the autograder, we can see that the repository failed 3 or the 8 tests. By looking at `results.txt` within the `student-submission` directory we can see that the repository failed `testFilterFound`, `testMergeRightEnd`, and `testMergeEmptyLeft`.
    - For `testFilterFound`, the test failed because the order of the filtered list were in the wrong order. For the other two tests, the program timed out. By looking in the code of `ListExamples.java` in the student submission, we can see that the `filter` method always adds a string to the front of the list when it should always be to the back of the list. In the `merge` method we can see that the method will never end because 1) there is no check to see if the values from both lists are equal for the first while loop and 2) the while loop for when list2 is the only list with elements left does not increment the correct index.
- - https://github.com/ucsd-cse15l-f22/list-methods-corrected
+ - [https://github.com/ucsd-cse15l-f22/list-methods-corrected](https://github.com/ucsd-cse15l-f22/list-methods-corrected)
    - ![image](https://user-images.githubusercontent.com/67081225/224513651-0bf7026c-c850-41a1-ab26-aec9c78405fc.png)
    - As expected, this repository passes all the tests from the autograder.
- - https://github.com/ucsd-cse15l-f22/list-methods-compile-error
+ - [https://github.com/ucsd-cse15l-f22/list-methods-compile-error](https://github.com/ucsd-cse15l-f22/list-methods-compile-error)
    - ![image](https://user-images.githubusercontent.com/67081225/224513735-964716af-71b9-4fd7-a1bc-1b71d5243cac.png)
    - For this repository, there is a compiler error due to a missing semicolon. So the autograder reports the error and states that files did not compile correctly, so the tests from JUnit do not run at all.
- - https://github.com/ucsd-cse15l-f22/list-methods-signature
+ - [https://github.com/ucsd-cse15l-f22/list-methods-signature](https://github.com/ucsd-cse15l-f22/list-methods-signature)
    - ![image](https://user-images.githubusercontent.com/67081225/224514908-169956bf-a350-40a8-b5b6-b47d8249ad40.png)
    - For this repository, the method header of `filter` has the parameters switched around. The autograder catches this and tells the student that their `filter` method header is incorrect.
- - https://github.com/ucsd-cse15l-f22/list-methods-filename
+ - [https://github.com/ucsd-cse15l-f22/list-methods-filename](https://github.com/ucsd-cse15l-f22/list-methods-filename)
    - ![image](https://user-images.githubusercontent.com/67081225/224515038-7a8036ac-14bd-49fa-806e-7a02c1e9e196.png)
    - For this repository, the name of the file that contains `ListExamples` is named incorrectly, so the autograder will catch this and say that `ListExamples.java` is needed to run the tests.
- - https://github.com/ucsd-cse15l-f22/list-methods-nested
+ - [https://github.com/ucsd-cse15l-f22/list-methods-nested](https://github.com/ucsd-cse15l-f22/list-methods-nested)
    - ![image](https://user-images.githubusercontent.com/67081225/224515141-a385c839-10be-4e50-9d85-96d670402c9f.png)
    - For this repository, the student's submission is nested within a different directory than we expect so the autograder is not able to find the files required to run the tests. So the autograder says that it needs `ListExamples.java`.
 
 Now that we have run a few examples of repositories with our tests, the final thing we will do is make it so that the autograder can run on a server.
- - We run the server with the https://github.com/ucsd-cse15l-f22/list-methods-corrected repository
+ - We run the server with the [https://github.com/ucsd-cse15l-f22/list-methods-corrected](https://github.com/ucsd-cse15l-f22/list-methods-corrected) repository
  - ![image](https://user-images.githubusercontent.com/67081225/224515717-25bb7cb1-61e9-4d9e-a6db-341d0136ec1c.png)
  
     
